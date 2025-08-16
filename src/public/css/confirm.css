@@ -1,0 +1,130 @@
+/* ===== ページ骨格 ===== */
+.confirm-page {
+    max-width: 972px;
+    /* 見本の幅感に寄せる */
+    margin: 40px auto 80px;
+    padding: 0 24px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: #6d5a50;
+    background: #fff;
+}
+
+/* タイトル */
+.site-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    color: #8b7765;
+    margin: 4px 0 8px;
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    color: #7d6a5c;
+    margin: 0 0 20px;
+}
+
+/* カード（外枠＋影） */
+.confirm-card {
+    border: 1px solid #cfc7c1;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    /* 角丸と表を揃える */
+}
+
+/* ===== 表 ===== */
+.confirm-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.confirm-table th,
+.confirm-table td {
+    padding: 16px 18px;
+    border-bottom: 1px solid #e6e2de;
+    /* 行の区切り線 */
+    font-size: 16px;
+    vertical-align: top;
+    word-wrap: break-word;
+}
+
+.confirm-table th {
+    width: 260px;
+    /* 左列を広めに */
+    background: #bda999;
+    /* ベージュ（見本風） */
+    color: #fff;
+    text-align: left;
+    font-weight: 700;
+}
+
+.confirm-table td {
+    background: #fff;
+    color: #4a403a;
+}
+
+.pre-wrap {
+    white-space: pre-wrap;
+}
+
+/* ===== ボタン ===== */
+.actions {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    padding: 16px 0 24px;
+    background: #fff;
+}
+
+.btn-primary,
+.btn-secondary {
+    min-width: 160px;
+    padding: 10px 28px;
+    border-radius: 6px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    transition: filter .2s ease, opacity .2s ease;
+}
+
+/* 送信（濃い茶） */
+.btn-primary {
+    background: #82756a;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    filter: brightness(0.95);
+}
+
+/* 修正（リンク風） */
+.btn-secondary {
+    background: transparent;
+    color: #7d6a5c;
+    text-decoration: underline;
+}
+
+.btn-secondary:hover {
+    opacity: .85;
+}
+
+/* ===== レスポンシブ ===== */
+@media (max-width: 768px) {
+    .confirm-table th {
+        width: 40%;
+    }
+
+    .site-title {
+        font-size: 24px;
+    }
+
+    .page-title {
+        font-size: 22px;
+    }
+}

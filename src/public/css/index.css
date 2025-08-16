@@ -1,0 +1,179 @@
+/* ===== ページ全体 ===== */
+.contact-page {
+    max-width: 972px;
+    /* Figmaの横幅に寄せる */
+    margin: 40px auto 80px;
+    /* 上に少し余白 */
+    padding: 0 24px;
+    box-sizing: border-box;
+    color: #6d5a50;
+    /* 薄茶系の本文色 */
+    font-family: 'Noto Sans JP', sans-serif;
+    background: #fff;
+    /* ページは白 */
+}
+
+/* タイトル */
+.site-title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 700;
+    margin: 8px 0 16px;
+    color: #8b7765;
+    /* 見出しのブラウン */
+}
+
+.page-title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 700;
+    margin: 0 0 24px;
+    color: #7d6a5c;
+}
+
+/* カード（フォームの囲み） */
+.contact-card {
+    border: 1px solid #8b7969;
+    /* Figma系の境界色 */
+    border-radius: 8px;
+    padding: 32px 28px;
+    background: #fff;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== フォームの行（2カラム） ===== */
+.row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    /* 左：ラベル 右：入力欄 */
+    gap: 16px;
+    align-items: start;
+    margin-bottom: 18px;
+}
+
+.label {
+    font-weight: 700;
+    color: #b48a78;
+    /* ラベルの薄茶 */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.req {
+    color: #d9534f;
+    /* 必須の赤 */
+    margin-left: 6px;
+    font-weight: 700;
+}
+
+.field input[type="text"],
+.field input[type="email"],
+.field textarea,
+.field select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #e0dfde;
+    /* 薄いグレー枠 */
+    border-radius: 4px;
+    background: #f5f4f3;
+    /* 薄いグレー背景（Figma風） */
+    font-size: 16px;
+    color: #4a403a;
+    box-sizing: border-box;
+}
+
+.field textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+    color: #beb9b5;
+    /* プレースホルダ淡色 */
+}
+
+/* お名前（姓・名）を横並びに */
+.name-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+/* ラジオ */
+.radios {
+    display: flex;
+    gap: 28px;
+    align-items: center;
+    padding: 6px 0;
+}
+
+.radio input {
+    margin-right: 6px;
+}
+
+/* セレクトの見た目（右に▼） */
+.select-wrap {
+    position: relative;
+}
+
+.select-wrap select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.select-wrap .select-arrow {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #9a8a7e;
+}
+
+/* エラー表示 */
+.error {
+    margin-top: 6px;
+    font-size: 14px;
+    color: #d9534f;
+}
+
+/* ボタン */
+.actions {
+    display: flex;
+    justify-content: center;
+    margin-top: 28px;
+}
+
+.btn-primary {
+    background: #82756a;
+    /* Figmaのボタン色に近い */
+    color: #fff;
+    font-weight: 700;
+    padding: 12px 40px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: filter .2s ease;
+}
+
+.btn-primary:hover {
+    filter: brightness(0.95);
+}
+
+/* ===== レスポンシブ（幅 < 768px で縦並び） ===== */
+@media (max-width: 768px) {
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .label {
+        margin-bottom: 6px;
+    }
+
+    .name-split {
+        grid-template-columns: 1fr;
+    }
+}

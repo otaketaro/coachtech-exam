@@ -1,0 +1,24 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\Category;
+
+class CategorySeeder extends Seeder
+{
+    public function run(): void
+    {
+        $items = [
+            '商品の届けについて',
+            '商品の交換について',
+            '商品トラブル',
+            'ショップへのお問い合わせ',
+            'その他',
+        ];
+
+        foreach ($items as $content) {
+            Category::updateOrCreate(['content' => $content], ['content' => $content]);
+        }
+    }
+}

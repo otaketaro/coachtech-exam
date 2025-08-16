@@ -1,0 +1,128 @@
+/* ===== Register ページ専用 ===== */
+
+/* ページ全体の背景を切り替え（このクラスは Blade で付与） */
+.is-register-page {
+    background: #eee3d9;
+    /* 教材風のベージュ */
+}
+
+/* レイアウトのヘッダーが bg-white で白固定されるのを上書き */
+.is-register-page header.bg-white {
+    background: #efe6dd !important;
+    border-bottom: 1px solid #e7e1db;
+    box-shadow: none;
+}
+
+/* ヘッダー内：タイトル＋右上loginリンク */
+.fl-header {
+    position: relative;
+}
+
+/* Register 見出し */
+.fl-page-title {
+    margin: 0;
+    text-align: center;
+    color: #8b7969;
+    font-weight: 600;
+}
+
+/* 右上の「login」ボタン風リンク（クリックで /login へ） */
+.fl-login-link {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 12px;
+    color: #b3a89e;
+    text-decoration: none;
+    border: 1px solid #d9d2cc;
+    padding: 6px 12px;
+    border-radius: 8px;
+    opacity: .85;
+}
+
+.fl-login-link:hover {
+    opacity: 1;
+}
+
+/* 中央カード配置 */
+.fl-auth-register {
+    padding: 16px 0 64px;
+    display: grid;
+    place-items: start center;
+}
+
+.fl-auth-register__card {
+    width: min(640px, 92%);
+    background: #fff;
+    border: 1px solid #e7e1db;
+    border-radius: 14px;
+    box-shadow: 0 6px 24px rgba(0, 0, 0, .06);
+    padding: 36px;
+}
+
+/* 入力 */
+.fl-auth-register__group {
+    margin-bottom: 22px;
+}
+
+.fl-auth-register__label {
+    display: block;
+    margin: 0 0 8px;
+    font-weight: 600;
+    color: #5a524c;
+}
+
+.fl-auth-register__input {
+    width: 100%;
+    height: 44px;
+    padding: 10px 14px;
+    border: 1px solid #e8e4df;
+    border-radius: 6px;
+    background: #f6f3f1;
+    color: #6a635d;
+    outline: none;
+}
+
+.fl-auth-register__input::placeholder {
+    color: #c2b7ae;
+}
+
+.fl-auth-register__input:focus {
+    border-color: #d9cfc7;
+    background: #f8f6f4;
+}
+
+/* エラー */
+.fl-auth-register__error {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #c65353;
+}
+
+/* ボタン */
+.fl-auth-register__actions {
+    text-align: center;
+    margin-top: 14px;
+}
+
+.fl-auth-register__btn {
+    appearance: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px 36px;
+    border-radius: 8px;
+    background: #8b7969;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: .1em;
+    transition: transform .02s ease, background .2s ease;
+}
+
+.fl-auth-register__btn:hover {
+    background: #7a6a5d;
+}
+
+.fl-auth-register__btn:active {
+    transform: translateY(1px);
+}
