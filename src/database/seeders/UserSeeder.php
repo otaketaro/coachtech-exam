@@ -8,17 +8,16 @@ use Illuminate\Support\Facades\Hash;
 
 class UserSeeder extends Seeder
 {
-    /**
-     * Run the database seeds.
-     */
     public function run(): void
     {
-        DB::table('users')->insert([
-            'name' => '管理者ユーザー',
-            'email' => 'admin@example.com',
-            'password' => Hash::make('password123'), // ハッシュ化したパスワード
-            'created_at' => now(),
-            'updated_at' => now(),
-        ]);
+        DB::table('users')->updateOrInsert(
+            ['email' => 'admin@example.com'],
+            [
+                'name'       => '管理者ユーザー',
+                'password'   => Hash::make('password123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ]
+        );
     }
 }

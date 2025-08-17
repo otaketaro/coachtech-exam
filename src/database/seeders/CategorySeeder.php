@@ -9,8 +9,9 @@ class CategorySeeder extends Seeder
 {
     public function run(): void
     {
+        // 要件通りの5件（「商品“の”お届けについて」←おを含む）
         $items = [
-            '商品の届けについて',
+            '商品のお届けについて',
             '商品の交換について',
             '商品トラブル',
             'ショップへのお問い合わせ',
@@ -18,7 +19,10 @@ class CategorySeeder extends Seeder
         ];
 
         foreach ($items as $content) {
-            Category::updateOrCreate(['content' => $content], ['content' => $content]);
+            Category::updateOrCreate(
+                ['content' => $content],
+                ['content' => $content]
+            );
         }
     }
 }

@@ -6,17 +6,13 @@ use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
-    /**
-     * Seed the application's database.
-     *
-     * @return void
-     */
-    public function run()
+    public function run(): void
     {
-        // CategorySeeder と ContactSeeder を呼び出す
+        // Category -> Contact -> User の順でOK
         $this->call([
             CategorySeeder::class,
             ContactSeeder::class,
+            UserSeeder::class, // 任意だが便利
         ]);
     }
 }
