@@ -35,8 +35,8 @@ php artisan db:seed
 ```
 
 ## 使用技術
-1. Laravel Framework 8.83.8
-2. PHP 8.1.33
+1. Laravel Framework 8.83.29
+2. PHP 8.4.11
 3. MySQL 8.0.26
 4. Docker 28.0.1
 
@@ -70,8 +70,11 @@ php artisan db:seed
 │ updated_at│
 └──────────┘
 
+## 管理者ログイン情報
+- メールアドレス: admin@example.com
+- パスワード: password123
 
 
 ## URL
-- 開発環境：http://xxxxxx
-- phpMyAdmin:：http://xxxxxx
+- 開発環境：http://localhost
+- phpMyAdmin:：http://localhost:8080
